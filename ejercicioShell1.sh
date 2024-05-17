@@ -8,15 +8,15 @@ echo "Mi nombre es $nombre tengo $edad años y vivo en $ciudad"
 
 #VARIABLES: ejercicio 2.  -Escribir el siguiente texto pero con inputs por consola:
 
-#read -p "¿Cual es tu actividad favorita?. Escribe la respuesta: " actividad
+read -p "¿Cual es tu actividad favorita?. Escribe la respuesta: " actividad
 
-#read -p "¿Cual es tu comida favorita?. Escribe la respuesta: " comida
+read -p "¿Cual es tu comida favorita?. Escribe la respuesta: " comida
 
-#echo “Mi actividad favorita es $actividad. Mi comida favorita es $comida”
+echo “Mi actividad favorita es $actividad. Mi comida favorita es $comida”
 
 #PARAMETROS (argumentos posicionales): ejercicio 1. Pasar tres parámetros e imprime el que está en la posición 1 y 3
-#echo "el primer parametro es $1"
-#echo "el tercer parametro es $3"
+echo "el primer parametro es $1"
+echo "el tercer parametro es $3"
 
 
 #PARAMETROS (argumentos posicionales): ejercicio 2. -Completar la siguiente frase:
@@ -24,33 +24,33 @@ echo "Mi nombre es $nombre tengo $edad años y vivo en $ciudad"
 #echo "en el fichero $()
 
 #CONDICIONALES: ejercicio 1
-#id=$(id)
+id=$(id)
 
-#if [ "$id" != "root" ]; then
- #   echo "No tiene acceso como root"
-#fi
+if [ "$id" != "root" ]; then
+   echo "No tiene acceso como root"
+fi
 
 #CONDICIONALES: ejercicio 2. Escribir un scripts que compare dos inputs (int) y nos de los siguientes mensajes:
-#read -p "ingresa un numero: " n1
-#read -p "ingresa otro numero: " n2
+read -p "ingresa un numero: " n1
+read -p "ingresa otro numero: " n2
 
-#if [ "$n1" = "$n2" ]; then
-#   echo 'Los números ingresados son iguales'
-#elif [ "$n1" -gt "$n2" ]; then
-#    echo "$n1 es mayor que $n2"
-#elif [ "$n1" -lt "$n2" ]; then
-#    echo "$n2 es mayor que $n1"
-#fi
+if [ "$n1" = "$n2" ]; then
+   echo 'Los números ingresados son iguales'
+elif [ "$n1" -gt "$n2" ]; then
+    echo "$n1 es mayor que $n2"
+elif [ "$n1" -lt "$n2" ]; then
+    echo "$n2 es mayor que $n1"
+fi
 
 #CONDICIONALES: ejercicio 3. Escribir un script que nos diga si el valor ingresado es divisible por 2
-#read -p "ingresa un numero: " n1
-#divisor=2
-#modulo=$((n1 % divisor))
-#if [ $modulo -eq 0 ]; then
-#   echo "el valor ingresado es divisible por 2"
-#else
-#   echo "el valor ingresado no es divisible por 2"
-#fi
+read -p "ingresa un numero: " n1
+divisor=2
+modulo=$((n1 % divisor))
+if [ $modulo -eq 0 ]; then
+   echo "el valor ingresado es divisible por 2"
+else
+   echo "el valor ingresado no es divisible por 2"
+fi
 
 #SUSTITUCION DE COMANDOS: ejercicio 1. Un script que nos pida la fecha de nacimiento y nos diga la edad que tiene el usuario en el momento que se ejecute el script.
 
@@ -92,16 +92,17 @@ contador=0
 gameIsOn="true"
 while [ "$gameIsOn" = "true" ]; do
     read -p "ingresa un número para averiguar el PID" guessedPid 
-        if [ "$pid" -lt "$guessedPid" ]; then
+        if [ "$pid" = "$guessedPid" ]; then
+            echo "acertaste en $contador numero de intentos"
+            gameIsOn="false"
+        elif [ "$pid" -lt "$guessedPid" ]; then
             echo "tu numero es mayor que el PID"
             let contador=$contador+1
 
         elif [ "$pid" -gt "$guessedPid" ]; then
             echo "tu numero es menor que el PID"
             let contador=$contador+1
-        elif [ "$pid" = "$guessedPid" ]; then
-            echo "acertaste en $contador numero de intentos"
-            gameIsOn="false"
+        
         fi
 done
 }
