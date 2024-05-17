@@ -14,14 +14,8 @@ read -p "¿Cual es tu comida favorita?. Escribe la respuesta: " comida
 
 echo “Mi actividad favorita es $actividad. Mi comida favorita es $comida”
 
-#PARAMETROS (argumentos posicionales): ejercicio 1. Pasar tres parámetros e imprime el que está en la posición 1 y 3
-echo "el primer parametro es $1"
-echo "el tercer parametro es $3"
-
-
-#PARAMETROS (argumentos posicionales): ejercicio 2. -Completar la siguiente frase:
-#“En el fichero ” <aquí va el nombre del fichero> “existen” <aquí va la cantidad de parámetros>
-#echo "en el fichero $()
+#PARAMETROS (argumentos posicionales): ejercicio 1. 
+#este ejercicio está en el fichero parametros.sh
 
 #CONDICIONALES: ejercicio 1
 id=$(id)

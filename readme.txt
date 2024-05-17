@@ -1,3 +1,20 @@
+## PARÁMETROS: ejercicio 1 y 2. NOTA: este ejercicio se encuentra en el fichero <parametros.sh>
+
+*Pasar tres parámetros e imprime el que está en la posición 1 y 3
+*Completar la siguiente frase: “En el fichero” <aquí va el nombre del fichero> “existen” <aquí va la cantidad de parámetros>
+
+- el comando $0 devuelve el nombre del fichero sobre el que se está trabajando. 
+- el comando $# devuelve el número de parámetros que se han introducido por consola. 
+
+## CONDICIONALES: ejercicio 1
+
+*Escribir un script que compare dos inputs (int) y nos dé los siguientes mensajes:*
+- “Los números ingresados son iguales”
+- “n1 es mayor que n2”
+- “n2 es mayor que n1”
+
+*He utilizado un segundo elif en lugar del else para usar el menor que (lt).*
+
 ## CONDICIONALES: ejercicio 2
 
 *Escribir un script que compare dos inputs (int) y nos dé los siguientes mensajes:*
@@ -38,6 +55,14 @@
 
 
 <hr>
+
+## PARAMETERS: exercise 1 and 2. NOTE: for this exercise open the file <parametros.sh>
+
+*Pass three parameters and print the one in position 1 and 3.
+*Complete the following sentence: "In the file" <here goes the name of the file> "there are" <here goes the number of parameters>.
+
+The command $0 returns the name of the file being worked on.
+The command $# returns the number of parameters that have been entered via the console.
 
 ## CONDITIONALS: Exercise 2
 
