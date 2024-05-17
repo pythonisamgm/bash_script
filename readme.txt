@@ -35,3 +35,44 @@
 ## BUCLES: ejercicio 2
 
 *En este ejercicio he creado un script que te da la opción de crear un archivo. Luego pregunta si quieres borrar algún archivo recursivamente (while loop), hasta que la respuesta sea negativa. Para ingresar el nombre y extensión del archivo hay que concatenar strings.*
+
+
+<hr>
+
+## CONDITIONALS: Exercise 2
+
+*Write a script that compares two inputs (int) and gives the following messages:*
+- “The entered numbers are equal”
+- “n1 is greater than n2”
+- “n2 is greater than n1”
+
+*I used a second elif instead of else to use the less than (lt) operator.*
+
+## CONDITIONALS: Exercise 3
+
+*Write a script that tells us if the entered value is divisible by 2*
+
+- I used "modulo" and "-eq 0" to check if the remainder was zero.
+
+## IN COMMAND SUBSTITUTION
+
+*A script that asks for the date of birth and tells us the age of the user at the time the script is run.*
+
+*I created two functions:*
+1. The first returns the year but does not consider months and days.
+2. In the second:
+   - The input is split with the "cut" command.
+   - Converts the date to seconds.
+   - Gets the current date in seconds using the "date" command.
+   - Calculates the difference between the dates.
+   - Subtracts the seconds in a year and the total seconds of life.
+
+## LOOPS: Exercise 1
+
+*Create a script that guesses the PID of the script, informing us at each step if the entered number is higher or lower. When the correct number is guessed, the script ends, informing us of the number of attempts.*
+
+*This script has a while loop that remains active until the user guesses the PID of the script. In the if statement, I put the success case first to consume fewer resources.*
+
+## LOOPS: Exercise 2
+
+*In this exercise, I created a script that gives you the option to create a file. Then it asks if you want to delete any file recursively (while loop) until the answer is negative. To enter the name and extension of the file, strings must be concatenated.*
