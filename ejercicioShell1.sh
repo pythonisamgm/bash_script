@@ -1,3 +1,4 @@
+#!/bin/bash
 #VARIABLES: ejercicio 1. Escribir el siguiente texto con variables:
 
 nombre="Marta"
@@ -19,8 +20,10 @@ echo “Mi actividad favorita es $actividad. Mi comida favorita es $comida”
 
 #CONDICIONALES: ejercicio 1
 id=$(id)
+user=$(whoami)
+echo "usuario $user"
 
-if [ "$id" != "root" ]; then
+if [ "$id" != root ]; then
    echo "No tiene acceso como root"
 fi
 
