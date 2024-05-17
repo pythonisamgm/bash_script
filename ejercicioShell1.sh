@@ -20,11 +20,9 @@ echo “Mi actividad favorita es $actividad. Mi comida favorita es $comida”
 
 #CONDICIONALES: ejercicio 1
 id=$(id)
-user=$(whoami)
-echo "usuario $user"
 
-if [ "$id" != root ]; then
-   echo "No tiene acceso como root"
+if [ "$id" -ne 0 ]
+  then echo "Please run as root"
 fi
 
 #CONDICIONALES: ejercicio 2. Escribir un scripts que compare dos inputs (int) y nos de los siguientes mensajes:
